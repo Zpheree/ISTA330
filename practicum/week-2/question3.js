@@ -22,7 +22,7 @@ var numberOfOrderedPairs = function(input) {
         }
     }
     
-    return temp.length / 2
+    return (temp.length / 2) - 1
 };
 
 /* let test = numberOfOrderedPairs([4,2,6,9])

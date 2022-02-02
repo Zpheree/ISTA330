@@ -11,5 +11,27 @@ The letters in A are guaranteed distinct, and all characters in A and B are lett
 */
 
 var howManyCommon = function(A, B) {
+    a_letters = [];
+    b_letters = [];
+    count = 0;
 
+    for (let letter of A) {
+        a_letters.push(letter);
+    }
+    for (let letter of B) {
+        b_letters.push(letter);
+    }
+
+    b_letters = [...new Set(b_letters)]
+    for (let letter1 of a_letters) {
+        for (let letter2 of b_letters) {
+            if (letter1 === letter2)
+                count ++;
+        }
+    
+    }
+    return count;
 };
+
+let test = howManyCommon('asDfy', 'dsssaaFa')
+console.log(test)
