@@ -22,7 +22,6 @@ var howManyCommon = function(A, B) {
         b_letters.push(letter);
     }
 
-    b_letters = [...new Set(b_letters)]
     for (let letter1 of a_letters) {
         for (let letter2 of b_letters) {
             if (letter1 === letter2)
@@ -33,5 +32,5 @@ var howManyCommon = function(A, B) {
     return count;
 };
 
-let test = howManyCommon('asDfy', 'dsssaaFa')
-console.log(test)
+/* let test = howManyCommon('te', 'TTTER')
+console.log(test) */
