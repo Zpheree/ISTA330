@@ -8,5 +8,24 @@ output: [1, 0, 1, 2]
 */
 
 var biggerAndEven = function(input) {
-
+    result = [];
+    
+    for (let element of input) {
+        count = 0;
+        i = 1;
+        
+        while (i < input.length) {
+            if (input[i - 1] > element) {
+                if (input[i - 1] % 2 == 0) {
+                    count++;
+                }
+            result.push(count)
+            }
+            i++;
+        }
+    }
+    return result
 };
+
+let test = biggerAndEven([23, 44, 12, 4])
+console.log(test)
