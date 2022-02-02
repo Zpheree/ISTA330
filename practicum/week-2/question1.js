@@ -18,4 +18,4 @@ var runningSum = function(input) {
 };
 
 /*let test = runningSum([5, 6, 1, 3, 5]);
-console.log(test) */
+console.log(test) test*/
