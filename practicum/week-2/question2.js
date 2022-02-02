@@ -12,7 +12,7 @@ Example: input: cookies = [3, 5, 8] , extraCookies = 8
  var canGetEqualCookies = function(cookies, extraCookies) {
 
         let result = [];
-        sum = 0
+        sum = 0;
 
         for (let element of cookies) {
                 sum = sum + element
