@@ -16,5 +16,5 @@ var maxMinusMin = function(n) {
 return max_val - min_val
 };
 
-let test = maxMinusMin(472)
-console.log(test)
+/*let test = maxMinusMin(472)
+console.log(test)*/
