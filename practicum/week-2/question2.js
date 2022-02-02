@@ -10,6 +10,22 @@ Example: input: cookies = [3, 5, 8] , extraCookies = 8
  */
 
  var canGetEqualCookies = function(cookies, extraCookies) {
-     
-    
+
+        let result = [];
+        sum = 0
+
+        for (let element of cookies) {
+                sum = sum + element
+        }
+        
+        sum = sum + extraCookies
+        
+        if (sum % cookies.length == 0) {
+                return true
+        } else {
+                return false
+        }      
  };
+
+ /* let test = canGetEqualCookies([5, 5, 8], 8)
+ console.log(test) */
