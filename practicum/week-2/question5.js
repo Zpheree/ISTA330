@@ -12,6 +12,10 @@ output: 3
 */
 
 var minimalReduction = function(n) {
-
+    
+    
 };
+
+let test = minimalReduction(19)
+console.log(test)
 

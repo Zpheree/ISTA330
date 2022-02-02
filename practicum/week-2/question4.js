@@ -27,7 +27,6 @@ var howManyCommon = function(A, B) {
             if (letter1 === letter2)
                 count ++;
         }
-    
     }
     return count;
 };
