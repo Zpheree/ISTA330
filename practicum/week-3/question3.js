@@ -13,5 +13,22 @@ output: [
 */
 
 var PascalTriangle = function(n) {
+	let arr = []
 
+ 	for (let i = 0; i < n; i++) {
+  	let row = [1]
+
+  	for (let x = 1; x < i; x++) {
+      row.push(arr[i - 1][x - 1] + arr[i - 1][x])
+    }
+
+    if (i > 0) {
+    	row.push(1)
+    }
+
+    arr.push(row)
+  }
+  return arr
 };
+
+/*console.log(PascalTriangle(5))*/

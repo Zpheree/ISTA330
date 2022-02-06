@@ -13,5 +13,17 @@ Example:
 */
 
 var hasDuplicates = function(input) {
-
+    let val_in_array = [];
+    
+    for (let i = 0; i < input.length; i++) {
+        let val = input[i];
+				
+        if (val_in_array.indexOf(val) !== -1) {
+        	return true
+        }
+        val_in_array.push(val)
+    }
+    return false
 };
+
+/*console.log(hasDuplicates([19,1,23,4,3,2]))*/
