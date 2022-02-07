@@ -17,15 +17,30 @@ output: true
 */
 
 var isMonotonic = function(input) {
-    let ascendOrder = A.sort((a,b) => a - b);
-    console.log(ascendOrder);
-    let descendOrder = A.sort((a,b) => b - a);
-    console.log(descendOrder);
-    if (A != ascendOrder && A != descendOrder) {
+    let type = 0;
+  let i = 0;
+  while (input[i] == input[i+1] && i < input.length){
+    i++;
+  }
+  if (i == input.length) {
+    return true;
+  }
+  if (input[i] < input[i+1]) {
+    while (i < input.length) {
+      if (input[i] > input[i+1]) {
         return false;
-    } else {
-        return true;
+      }
+      i++;
     }
+  } else {
+    while (i < input.length) {
+      if (input[i] < input[i+1]) {
+        return false;
+      }
+      i++;
+    }
+  }
+  return true;
 };
 
-console.log([12,6,2,2,2,0]);
+/*console.log([12,6,2,2,2,0]);*/

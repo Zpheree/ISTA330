@@ -12,17 +12,19 @@ output: 2
 */
 
 var m_element = function(input) {
-    let current;
-    let next;
-     
+    let min = input.length/2|0;
     for (let i = 0; i < input.length; i++) {
-        current = input[input];
-        console.log(current)
-        for (let x = i + 1; x < input.length; x++) {
-            next = input[x];
-            console.log(next)
-
-            
+        let cur = 1;
+            for (let j = i+1; j < input.length; j++) {
+                if (input[i] == input[j]) {
+                    cur += 1;
+                }
+                if (cur >= min) {
+                    return input[i];
+               }
         }
-    }
+   }
+   return -1;
 };
+
+/*console.log(m_element([1, 2, 2, 3, 2, 7, 2]))*/
