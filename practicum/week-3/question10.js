@@ -27,20 +27,20 @@ var minPairs = function(input) {
         }
         if (min != i) {
             [input[i],input[min]] = [input[min],input[i]];
-    }
+        }
     len += 1;
-  }
-
-  let minDif = input[len-1];
-  for (let l = 1; l < input.length; l++) {
-    if (input[l] - input[l-1] < minDif) {
-      retVal = [];
-      minDif = input[l] - input[l-1];
-      retVal.push([input[l-1],input[l]]);
-    } else if (input[l] - input[l-1] == minDif) {
-      retVal.push([input[l-1],input[l]]);
     }
-  }
+
+    let minDif = input[len-1];
+    for (let l = 1; l < input.length; l++) {
+        if (input[l] - input[l-1] < minDif) {
+            retVal = [];
+            minDif = input[l] - input[l-1];
+            retVal.push([input[l-1],input[l]]);
+        }   else if (input[l] - input[l-1] == minDif) {
+                retVal.push([input[l-1],input[l]]);
+            }
+    }
   return retVal;
 };
 
