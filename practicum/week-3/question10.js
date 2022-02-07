@@ -44,4 +44,4 @@ var minPairs = function(input) {
   return retVal;
 };
 
-console.log(minPairs([1,-5,-10,24,19,-4,-14,23]))
+/*console.log(minPairs([1,-5,-10,24,19,-4,-14,23]))*/
