@@ -25,4 +25,4 @@ var transpose = function(M) {
     return newArray;  
 };
 
-/*console.log(transpose([[1,2,3],[4,5,6]]))* update/
+/*console.log(transpose([[1,2,3],[4,5,6]])) update*/
