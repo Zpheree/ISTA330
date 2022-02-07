@@ -12,5 +12,17 @@ output: 2
 */
 
 var m_element = function(input) {
+    let current;
+    let next;
+     
+    for (let i = 0; i < input.length; i++) {
+        current = input[input];
+        console.log(current)
+        for (let x = i + 1; x < input.length; x++) {
+            next = input[x];
+            console.log(next)
 
+            
+        }
+    }
 };
