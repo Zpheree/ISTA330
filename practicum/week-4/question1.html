@@ -15,75 +15,54 @@
         and under the image display its name.Your webpage should be responsive.
     </div>
     <div id='flowersDiv'>
-
     </div>
-    <script>
-        /*
-           Using the array flowers below, 
-           display the flowers. Use the div 'flowersDiv'.
-           You should display the flowers in two rows,
-           each row containing 4 flowers.
-           For each flower, you should show the image
-           and under the image display its name.
-        */
-       class Flower {
-           constructor(name, pictureName) {
-               this.name = name;
-               this.picture = pictureName;
-           }
-       }
-       let daffodil = new Flower('Daffodil', 'https://habahram.blob.core.windows.net/flowers/daffodil.jpg');
-       let cherryblossom = new Flower('Cherry blossom', 'https://habahram.blob.core.windows.net/flowers/cherryblossom.jpg');
-       let lily = new Flower('Lily', 'https://habahram.blob.core.windows.net/flowers/lily.jpg');
-       let daisy = new Flower('Daisy', 'https://habahram.blob.core.windows.net/flowers/daisy.jpg');
-       let sunflower = new Flower('Sunflower', 'https://habahram.blob.core.windows.net/flowers/sunflower.jpg');
-       let tulip = new Flower('Tulip', 'https://habahram.blob.core.windows.net/flowers/tulip.jpg');
-       let rose = new Flower('Rose', 'https://habahram.blob.core.windows.net/flowers/rose.jpg');
-       let waterlily = new Flower('Water lily', 'https://habahram.blob.core.windows.net/flowers/waterlily.jpg');
-       
-       let flowers = [
-             daffodil,
-             cherryblossom,
-             lily,
-             daisy,
-             sunflower,
-             tulip,
-             rose,
-             waterlily
-       ];
-    
-    </script>
+        <script>
+            /*
+            Using the array flowers below, 
+            display the flowers. Use the div 'flowersDiv'.
+            You should display the flowers in two rows,
+            each row containing 4 flowers.
+            For each flower, you should show the image
+            and under the image display its name.
+            */
+        class Flower {
+            constructor(name, pictureName) {
+                this.name = name;
+                this.picture = pictureName;
+            }
+        }
 
-    <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>                        
-            </button>
-            <a class="navbar-brand" href="#">WebSiteName</a>
-        </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-            <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                <li><a href="#">Page 1-1</a></li>
-                <li><a href="#">Page 1-2</a></li>
-                <li><a href="#">Page 1-3</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Page 2</a></li>
-            <li><a href="#">Page 3</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-            </ul>
-        </div>
-        </div>
-    </nav>
-</body>
+        let daffodil = new Flower('Daffodil', 'https://habahram.blob.core.windows.net/flowers/daffodil.jpg');
+        let cherryblossom = new Flower('Cherry blossom', 'https://habahram.blob.core.windows.net/flowers/cherryblossom.jpg');
+        let lily = new Flower('Lily', 'https://habahram.blob.core.windows.net/flowers/lily.jpg');
+        let daisy = new Flower('Daisy', 'https://habahram.blob.core.windows.net/flowers/daisy.jpg');
+        let sunflower = new Flower('Sunflower', 'https://habahram.blob.core.windows.net/flowers/sunflower.jpg');
+        let tulip = new Flower('Tulip', 'https://habahram.blob.core.windows.net/flowers/tulip.jpg');
+        let rose = new Flower('Rose', 'https://habahram.blob.core.windows.net/flowers/rose.jpg');
+        let waterlily = new Flower('Water lily', 'https://habahram.blob.core.windows.net/flowers/waterlily.jpg');
+        
+        let flowers = [
+                daffodil,
+                cherryblossom,
+                lily,
+                daisy,
+                sunflower,
+                tulip,
+                rose,
+                waterlily
+        ];
+
+        for (i = 0; i < flowers.length; i++) {
+            var image = document.createElement("img");
+            image.src = flowers[i].picture;
+            var myImage = document.getElementById("flowersDiv").innerText = flowers[i].name;
+            var myText = document.getElementById("flowersDiv").appendChild(image);
+            // const p1 = document.createElement('p');
+            // p1.innerText = flowers[i].name;
+            // document.body.appendChild(p1);
+            myImage.setAttribute("width", 200);
+            myImage.setAttribute("height", 200);
+            };
+        </script>
+    </body>
 </html>
