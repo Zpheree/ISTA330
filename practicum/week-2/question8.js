@@ -27,5 +27,5 @@ var biggerAndEven = function(input) {
     return result
 };
 
-let test = biggerAndEven([23, 44, 12, 4])
-console.log(test)
+/*let test = biggerAndEven([23, 44, 12, 4])
+console.log(test)*/
