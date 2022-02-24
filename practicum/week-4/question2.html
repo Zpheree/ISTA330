@@ -100,6 +100,18 @@
             rose,
             waterlily
         ];
+
+        for (i = 0; i < flowers.length; i++) {
+            var image = document.createElement("img");
+            image.src = flowers[i].picture;
+            var myImage = document.getElementById("flowersDiv").innerText = flowers[i].name;
+            var myText = document.getElementById("flowersDiv").appendChild(image);
+            // const p1 = document.createElement('p');
+            // p1.innerText = flowers[i].name;
+            // document.body.appendChild(p1);
+            myImage.setAttribute("width", 200);
+            myImage.setAttribute("height", 200);
+            };
     </script>
 </body>
 
