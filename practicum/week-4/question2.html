@@ -101,17 +101,54 @@
             waterlily
         ];
 
-        for (i = 0; i < flowers.length; i++) {
-            var image = document.createElement("img");
-            image.src = flowers[i].picture;
-            var myImage = document.getElementById("flowersDiv").innerText = flowers[i].name;
-            var myText = document.getElementById("flowersDiv").appendChild(image);
-            // const p1 = document.createElement('p');
-            // p1.innerText = flowers[i].name;
-            // document.body.appendChild(p1);
-            myImage.setAttribute("width", 200);
-            myImage.setAttribute("height", 200);
-            };
+        /*Below code is from solutions sent to me by Professor Hamidreza*/
+
+        let reorderFlowers = (firstFlower) => {
+            let newFlowers = [firstFlower];
+            // sorts the flower array alphabetically
+            flowers.sort((a,b) => {
+                if(a.name > b.name) {
+                    return 1;
+                }
+                if(a.name < b.name) {
+                    return -1;
+                }
+                return 0;
+            });
+            // add the flowers that are alphabetically right of the first flower to a new array
+            let idx = (flowers.indexOf(firstFlower) + 1) % flowers.length
+            let prevIdx = (idx === 0) ? flowers.length - 1 : idx - 1;
+            for(let i = idx; i != prevIdx; i = (i+1) % flowers.length) {
+                newFlowers.push(flowers[i]);
+            }
+            flowers = newFlowers;
+        }
+
+        let displayFlowers = () => {
+            let root = document.querySelector('#flowersDiv');
+            for(let i = 0; i < 2; i++) {
+                let row = document.createElement('div');
+                row.setAttribute('class', 'row');
+                root.appendChild(row);
+                for(let j = 0; j < 4; j++) {
+                    let col = document.createElement('div');
+                    let flowerImg = document.createElement('img');
+                    let flowerTxt = document.createElement('h5');
+                    let idx = i * 4 + j;
+                    col.setAttribute('class', 'col');
+                    flowerImg.setAttribute('src', flowers[idx].picture);
+                    flowerTxt.innerHTML = flowers[idx].name;
+                    col.appendChild(flowerImg);
+                    col.appendChild(flowerTxt);
+                    row.appendChild(col);
+                    flowerImg.addEventListener('click', () => {
+                        root.innerHTML = ''; // clears the flowers from the page
+                        reorderFlowers(flowers[idx]);
+                        displayFlowers();
+                    });
+                }
+            }
+        }
     </script>
 </body>
 

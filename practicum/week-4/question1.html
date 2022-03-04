@@ -52,17 +52,33 @@
                 waterlily
         ];
 
-        for (i = 0; i < flowers.length; i++) {
-            var image = document.createElement("img");
-            image.src = flowers[i].picture;
-            var myImage = document.getElementById("flowersDiv").innerText = flowers[i].name;
-            var myText = document.getElementById("flowersDiv").appendChild(image);
-            // const p1 = document.createElement('p');
-            // p1.innerText = flowers[i].name;
-            // document.body.appendChild(p1);
-            myImage.setAttribute("width", 200);
-            myImage.setAttribute("height", 200);
-            };
+
+        /*Below code Taken from solutions given to me by Professor Hamidreza*/
+        
+        let displayFlowers = () => {
+            let root = document.querySelector('#flowersDiv');
+
+            for(let i = 0; i < 2; i++) {
+                row.setAttribute('class', 'row');
+                root.appendChild(row);
+
+                for (let j = 0; j < 4; j++) {
+                    let col = document.createElement('div');
+                    let flowerImg = document.createElement('img');
+                    let flowerTxt = document.createElement('h5');
+                    let idx = i * 4 + j; // index of the current flower
+                    col.setAttribute('class', 'col');
+                    flowerImg.setAttribute('src', flowers[idx].picture);
+                    flowerTxt.innerHTML = flowers[idx].name;
+                    col.appendChild(flowerImg);
+                    col.appendChild(flowerTxt);
+                    row.appendChild(col);
+                }
+            }
+        }
+        
+        displayFlowers();
+            
         </script>
     </body>
 </html>
