@@ -7,7 +7,7 @@
 </head>
 <body>
     <div id="question">
-        Using the array flowers below, 
+        Using the array flowers below ,  
         display the flowers. Use the div 'flowersDiv'.
         You should display the flowers in two rows,
         each row containing 4 flowers.
@@ -53,13 +53,14 @@
         ];
 
 
-        /*Below code Taken from solutions given to me by Professor Hamidreza*/
+        /* Below code Taken from solutions given to me by Professor Hamidreza*/
         
         let displayFlowers = () => {
             let root = document.querySelector('#flowersDiv');
 
             for(let i = 0; i < 2; i++) {
                 row.setAttribute('class', 'row');
+
                 root.appendChild(row);
 
                 for (let j = 0; j < 4; j++) {
